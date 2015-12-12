@@ -18,12 +18,29 @@ public class FileCreate {
         fwrite.close();
 
         Reader fread = new FileReader("C:\\MyDirectory\\myNewFile.txt");
-        int text;
-        while ((text = fread.read()) != -1) {
-            System.out.print((char) text);
+        int textOne;
+        while ((textOne = fread.read()) != -1) {
+            System.out.print((char) textOne);
         }
         fread.close();
 
+        BufferedReader buffread = new BufferedReader(new FileReader("C:\\MyDirectory\\myNewFile.txt"));
+        String textTwo;
+        while ((textTwo = buffread.readLine()) != null) {
+            System.out.println("BufferedReader output: " + textTwo);
+        }
+        buffread.close();
+
+        BufferedInputStream byteread;
+        byte[] buffer = new byte[1];
+        byteread = new BufferedInputStream(new FileInputStream("C:\\MyDirectory\\myNewFile.txt"));
+        while ((byteread.read(buffer)) != -1) {
+            String bytetostring = new String(buffer);
+            System.out.print(bytetostring);
+        }
+        byteread.close();
+
+        System.out.println();
         System.out.println("Создан файл: " + f.getName());
         System.out.println("Размер файла: " + f.length());
         System.out.println("Директория: " + f.getParent());
