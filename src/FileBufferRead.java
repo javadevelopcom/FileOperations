@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class FileBufferRead {
     static void readTextFile() throws IOException {
-        BufferedReader buffer = new BufferedReader(new FileReader("C:\\myNewFile.txt"));
+        BufferedReader buffer = new BufferedReader(new FileReader("C:\\myTextFile.txt"));
         String text;
         while ((text = buffer.readLine()) != null) {
             System.out.println(text);

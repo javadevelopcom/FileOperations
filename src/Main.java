@@ -18,5 +18,12 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+            FileCreate.fileSystemOperations();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
+
+// http://metanit.com/java/tutorial/6.11.php

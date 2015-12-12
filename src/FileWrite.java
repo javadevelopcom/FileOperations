@@ -4,7 +4,7 @@ import java.io.Writer;
 
 public class FileWrite {
      static void createTextFile() throws IOException {
-        Writer file = new FileWriter("C:\\myNewFile.txt", true);
+        Writer file = new FileWriter("C:\\myTextFile.txt", true);
         file.write("Запись и Чтение файлов. " + "\n");
         file.write("Класс FileWriter является производным от класса Writer и используется для записи текстовых файлов. ");
          file.append('\n');
