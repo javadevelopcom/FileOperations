@@ -5,21 +5,10 @@ public class Main {
 
         try {
             FileWrite.createTextFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
             FileBufferRead.readTextFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
             FileRead.readMyFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
             FileCreate.fileSystemOperations();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
